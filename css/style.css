@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  transition: 0.3s;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background-color: #008fdc;
+  border-radius: 20px 20px 0 0;
+  transition: 0.3s;
+
+}
+
+
+.card .image {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: #008fdc;
+  transition: 0.3s;
+
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+
+}
+
+.card .card-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  flex-direction: column;
+}
+
+.card .btn-dark {
+  text-align: right;
+  width: 100%;
+}
+
+.card .btn-dark input[type=checkbox] {
+  display: none;
+}
+
+.card .name-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: #525252;
+  transition: 0.3s;
+}
+
+.card .name-profession .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card .name-profession .profession {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .estrelas {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+
+}
+
+.card .estrelas i {
+  color: #008fdc;
+  font-size: 18px;
+  margin: 0 2px;
+  transition: 0.3s;
+}
+
+.card .button {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card .button button {
+  background: #008fdc;
+  margin-right: 20px;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card .btn-dark i{
+  color: white;
+}
+
+.card .btn-dark i.sol{
+  display: none;
+}
+
+
+/* theme dark */
+
+body.dark{
+  background: #121521;
+}
+
+body.dark .card{
+  background-color: #1f2437;
+}
+
+body.dark .card::before,
+body.dark .card .image,
+body.dark .card .button button{
+  background: #064d80;
+}
+
+body.dark .card .name-profession{
+  color:aliceblue
+}
+
+body.dark .card .estrelas i{
+  color: #064d80;
+
+}
+
+body.dark .card .card-content .lua{
+  display: none;
+}
+
+body.dark .card .card-content .sol{
+  display: inline-block;
+}
+
+
